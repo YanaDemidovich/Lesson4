@@ -69,6 +69,13 @@ ShowArr(ReversArr(myArray)); */
     return false;
 }
 
+// либо 
+
+bool Checking (int dot1, int dot2, int dot3) // метод проверки сторон правилу a < b + c
+{
+    return dot1 < dot2 + dot3 && dot2 < dot1 + dot3 && dot3 < dot1 + dot2;
+}
+
 Console.WriteLine("Длина первой стороны ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Длина второй стороны ");
