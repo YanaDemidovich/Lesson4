@@ -16,8 +16,9 @@ Console.WriteLine(ChangeNumber(10)); */
 
 // === Задача 2: Напишите программу, которая перевернет одномерный массив
 // последний будет на первом, а первый на последнем
+// выносит ошибку int, не понимаю в чем проблема((
 
-int CreateRandomArr(int size, int min, int max) // метод, который преобразует и выводит рандомный массив на экран
+/* int CreateRandomArr(int size, int min, int max) // метод, который преобразует и выводит рандомный массив на экран
 {
     int[] arr = new int[size];  
     for(int i = 0; i < size; i++)
@@ -52,13 +53,32 @@ int[] ReversArr (int[] arr) // метод, который переворачив
 
 int[] myArray = CreateRandomArr(5, 1, 10);
 ShowArr(myArray);
-ShowArr(ReversArr(myArray));
-
-
+ShowArr(ReversArr(myArray)); */
 
 
 // === Задача 3: Напишите программу, которая принимает 3 числа и проверяет может ли существовать 
 // треугольник с такими длинами сторон.
+// a < b + c
+
+bool Checking (int dot1, int dot2, int dot3)
+{
+    if (dot1 < dot2 + dot3 && dot2 < dot1 + dot3 && dot3 < dot1 + dot2)
+    {
+        return true;
+    }
+    return false;
+}
+
+Console.WriteLine("Длина первой стороны ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Длина второй стороны ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Длина третьей стороны ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Checking(num1, num2, num3));
+
+
 // Правило: каждая из сторон должны быть строго меньше суммы 2-х других
 
 // === Задача 4: Без применения рекурсии, написать метод, который выведет "n" чисел Фибоначчи
